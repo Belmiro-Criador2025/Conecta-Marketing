@@ -1,1 +1,34 @@
 Auth.tsx
+import { useState } from "react";
+
+export default function Auth() {
+  const [logged, setLogged] = useState(false);
+
+  return (
+    <div style={{ textAlign: "center", marginTop: 50 }}>
+      {!logged ? (
+        <>
+          <h2>Login / Registo</h2>
+
+          <input placeholder="Email" /><br /><br />
+          <input placeholder="Password" type="password" /><br /><br />
+
+          <button onClick={() => setLogged(true)}>
+            Entrar
+          </button>
+
+          <button onClick={() => setLogged(true)}>
+            Registar
+          </button>
+        </>
+      ) : (
+        <>
+          <h2>Estás logado</h2>
+          <button onClick={() => setLogged(false)}>
+            Sair
+          </button>
+        </>
+      )}
+    </div>
+  );
+}
