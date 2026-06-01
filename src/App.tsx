@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useRef, useState } from "react";
+import Auth from "./components/Auth";
 import { motion, useInView } from "framer-motion";
 import {
   ArrowRight,
