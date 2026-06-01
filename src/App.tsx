@@ -244,8 +244,10 @@ function App() {
       <div className="min-h-screen overflow-hidden bg-white text-[#0A2540] antialiased transition-colors duration-500 dark:bg-[#061826] dark:text-white">
         <header className="fixed inset-x-0 top-0 z-50 border-b border-[#0A2540]/10 bg-white/78 backdrop-blur-2xl transition-colors duration-500 dark:border-white/10 dark:bg-[#061826]/72">
           <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-5 sm:px-8">
-            <Logo />
-
+     <div className="flex items-center gap-4">
+  <Logo />
+  <Auth />
+</div>
             <nav className="hidden items-center gap-8 lg:flex" aria-label="Navegação principal">
               {navItems.map((item) => (
                 <a key={item} href={`#${item.toLowerCase().replace("í", "i").replace("ó", "o")}`} className="text-sm font-bold text-slate-700 transition hover:text-[#FF6B00] dark:text-white/72 dark:hover:text-white">
